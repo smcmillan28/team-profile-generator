@@ -19,37 +19,37 @@ function createCards() {
     allEmployees.forEach(employee => {
         if (employee.getRole() === "Manager") {
             const mgrHTML = 
-            `<div class="card text-center" style="width: 18rem; margin: 10px; display: inline-block;">
+            `<div class="card" style="width: 18rem; margin: 10px; display: inline-block;">
                 <div class="card-body">
-                    <h4 class="card-title" id="manager-title">Manager <i class="fas fa-briefcase"></i></h4><hr>
-                    <p class="card-text" id="manager-name">Manager Name: ${employee.name}</p>
-                    <p class="card-text" id="manager-id">Employee ID: ${employee.id}</p>
-                    <p class="card-text" id="manager-email">Email Address: <a href= "mailto: ${employee.email}">${employee.email}</a></p>
-                    <p class="card-text" id="manager-office">Office Number: ${employee.officeNumber}</p>
+                    <h4 class="card-title text-center" id="manager-title">Manager <i class="fas fa-briefcase"></i></h4><hr>
+                    <p class="card-text" id="manager-name"><strong>Name: </strong>${employee.name}</p>
+                    <p class="card-text" id="manager-id"><strong>ID: </strong>${employee.id}</p>
+                    <p class="card-text" id="manager-email"><strong>Email Address: </strong><a href= "mailto: ${employee.email}">${employee.email}</a></p>
+                    <p class="card-text" id="manager-office"><strong>Office Number: </strong>${employee.officeNumber}</p>
                 </div>
             </div>`;
             cardHTML.push(mgrHTML);
         } else if (employee.getRole() === "Engineer") {
             const engHTML = 
-            `<div class="card text-center" style="width: 18rem; margin: 10px; display: inline-block;">
+            `<div class="card" style="width: 18rem; margin: 10px; display: inline-block;">
                 <div class="card-body">
-                    <h4 class="card-title" id="engineer-title">Engineer <i class="fas fa-cogs"></i></h4><hr>
-                    <p class="card-text" id="engineer-name">Engineer Name: ${employee.name}</p>
-                    <p class="card-text" id="engineer-id">Employee ID: ${employee.id}</p>
-                    <p class="card-text" id="engineer-email">Email Address: <a href= "mailto: ${employee.email}">${employee.email}</a></p>
-                    <p class="card-text" id="engineer-github">GitHub Profile: <a href="https://www.github.com/${employee.github}/" target="_blank">${employee.github}</a></p>
+                    <h4 class="card-title text-center" id="engineer-title">Engineer <i class="fas fa-cogs"></i></h4><hr>
+                    <p class="card-text" id="engineer-name"><strong>Name: </strong>${employee.name}</p>
+                    <p class="card-text" id="engineer-id"><strong>ID: </strong>${employee.id}</p>
+                    <p class="card-text" id="engineer-email"><strong>Email Address: </strong><a href= "mailto: ${employee.email}">${employee.email}</a></p>
+                    <p class="card-text" id="engineer-github"><strong>GitHub Profile: </strong><a href="https://www.github.com/${employee.github}/" target="_blank">${employee.github}</a></p>
                 </div>
             </div>`;
             cardHTML.push(engHTML);
         } else if (employee.getRole() === "Intern") {
             const intHTML =
-            `<div class="card text-center" style="width: 18rem; margin: 10px; display: inline-block;">
+            `<div class="card" style="width: 18rem; margin: 10px; display: inline-block;">
                 <div class="card-body">
-                    <h4 class="card-title" id="intern-title">Intern <i class="fas fa-user-graduate"></i></h4><hr>
-                    <p class="card-text" id="intern-name">Intern Name: ${employee.name}</p>
-                    <p class="card-text" id="intern-id">Employee ID: ${employee.id}</p>
-                    <p class="card-text" id="intern-email">Email Address: <a href= "mailto: ${employee.email}">${employee.email}</a></p>
-                    <p class="card-text" id="intern-school">School: ${employee.school}</p>
+                    <h4 class="card-title text-center" id="intern-title">Intern <i class="fas fa-user-graduate"></i></h4><hr>
+                    <p class="card-text" id="intern-name"><strong>Name: </strong>${employee.name}</p>
+                    <p class="card-text" id="intern-id"><strong>ID: </strong>${employee.id}</p>
+                    <p class="card-text" id="intern-email"><strong>Email Address: </strong><a href= "mailto: ${employee.email}">${employee.email}</a></p>
+                    <p class="card-text" id="intern-school"><strong>School: </strong>${employee.school}</p>
                 </div>
             </div>`;
             cardHTML.push(intHTML);

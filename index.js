@@ -24,7 +24,7 @@ function createCards() {
                     <h4 class="card-title" id="manager-title">Manager <i class="fas fa-briefcase"></i></h4><hr>
                     <p class="card-text" id="manager-name">Manager Name: ${employee.name}</p>
                     <p class="card-text" id="manager-id">Employee Id: ${employee.id}</p>
-                    <p class="card-text" id="manager-email">Email Address: ${employee.email}</p>
+                    <p class="card-text" id="manager-email">Email Address: <a href= "mailto: ${employee.email}">${employee.email}</a></p>
                     <p class="card-text" id="manager-office">Office Number: ${employee.officeNumber}</p>
                 </div>
             </div>`;
@@ -36,8 +36,8 @@ function createCards() {
                     <h4 class="card-title" id="engineer-title">Engineer <i class="fas fa-cogs"></i></h4><hr>
                     <p class="card-text" id="engineer-name">Engineer Name: ${employee.name}</p>
                     <p class="card-text" id="engineer-id">Employee Id: ${employee.id}</p>
-                    <p class="card-text" id="engineer-email">Email Address: ${employee.email}</p>
-                    <p class="card-text" id="engineer-github">GitHub Profile: ${employee.github}</p>
+                    <p class="card-text" id="engineer-email">Email Address: <a href= "mailto: ${employee.email}">${employee.email}</a></p>
+                    <p class="card-text" id="engineer-github">GitHub Profile: <a href="https://www.github.com/${employee.github}/" target="_blank">${employee.github}</a></p>
                 </div>
             </div>`;
             cardHTML.push(engHTML);
@@ -48,7 +48,7 @@ function createCards() {
                     <h4 class="card-title" id="intern-title">Intern <i class="fas fa-user-graduate"></i></h4><hr>
                     <p class="card-text" id="intern-name">Intern Name: ${employee.name}</p>
                     <p class="card-text" id="intern-id">Employee Id: ${employee.id}</p>
-                    <p class="card-text" id="intern-email">Email Address: ${employee.email}</p>
+                    <p class="card-text" id="intern-email">Email Address: <a href= "mailto: ${employee.email}">${employee.email}</a></p>
                     <p class="card-text" id="intern-school">School: ${employee.school}</p>
                 </div>
             </div>`;

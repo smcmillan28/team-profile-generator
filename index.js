@@ -19,7 +19,7 @@ function createCards() {
     allEmployees.forEach(employee => {
         if (employee.getRole() === "Manager") {
             const mgrHTML = 
-            `<div class="card" style="width: 18rem; margin: 10px; display: inline-block;">
+            `<div class="card text-center" style="width: 18rem; margin: 10px; display: inline-block;">
                 <div class="card-body">
                     <h4 class="card-title" id="manager-title">Manager <i class="fas fa-briefcase"></i></h4><hr>
                     <p class="card-text" id="manager-name">Manager Name: ${employee.name}</p>
@@ -31,7 +31,7 @@ function createCards() {
             cardHTML.push(mgrHTML);
         } else if (employee.getRole() === "Engineer") {
             const engHTML = 
-            `<div class="card" style="width: 18rem; margin: 10px; display: inline-block;">
+            `<div class="card text-center" style="width: 18rem; margin: 10px; display: inline-block;">
                 <div class="card-body">
                     <h4 class="card-title" id="engineer-title">Engineer <i class="fas fa-cogs"></i></h4><hr>
                     <p class="card-text" id="engineer-name">Engineer Name: ${employee.name}</p>
@@ -43,7 +43,7 @@ function createCards() {
             cardHTML.push(engHTML);
         } else if (employee.getRole() === "Intern") {
             const intHTML =
-            `<div class="card" style="width: 18rem; margin: 10px; display: inline-block;">
+            `<div class="card text-center" style="width: 18rem; margin: 10px; display: inline-block;">
                 <div class="card-body">
                     <h4 class="card-title" id="intern-title">Intern <i class="fas fa-user-graduate"></i></h4><hr>
                     <p class="card-text" id="intern-name">Intern Name: ${employee.name}</p>
@@ -80,7 +80,7 @@ function generateHTML() {
             <h2 style="text-align: center;">Dream Team Profile Page</h2>
         </header>
     
-        <section id="main" style="margin: 5%;">
+        <section id="main" style="width: 70%; margin: 0 auto;">
             ${createCards()}
         </section>
     
@@ -170,7 +170,6 @@ function buildTeam() {
                         buildTeam();
                     });
             } else if (res.type === "Finish Building Team") {
-                console.log(allEmployees);
                 const contents = generateHTML();
                 writeToFile("profile.html", contents);
                 return;

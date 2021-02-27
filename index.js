@@ -55,7 +55,8 @@ function createCards() {
             cardHTML.push(intHTML);
         }
     });
-    return cardHTML;
+    const newHTML = cardHTML.join(" ");
+    return newHTML;
 }
 
 // Function generating majority of HTML page
@@ -91,6 +92,7 @@ function generateHTML() {
     </html>`
 }
 
+// Calling fs library to create a page generator function
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, data, err => err ? console.log(err) : console.log("Success!"));
 }
@@ -169,6 +171,8 @@ function buildTeam() {
                     });
             } else if (res.type === "Finish Building Team") {
                 console.log(allEmployees);
+                const contents = generateHTML();
+                writeToFile("profile.html", contents);
                 return;
             }
         });
@@ -203,8 +207,6 @@ const init = () => {
             const mgr = new Manager(res.name, res.id, res.email, res.office);
             allEmployees.push(mgr);
             buildTeam();
-            const contents = generateHTML();
-            writeToFile("profile.html", contents);
         });
 }
 
